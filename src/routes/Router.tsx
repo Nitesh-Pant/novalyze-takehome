@@ -4,14 +4,16 @@ import Home from "../pages/Home.tsx";
 import Login from "../pages/Login.tsx";
 import PrivateRoute from "../components/PrivateRoute.tsx";
 import ForgotPassword from "../pages/ForgotPassowrd.tsx";
+import Signup from "../pages/Signup.tsx";
 
 const AppRouter: React.FC = () => {
   return (
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/forgot-password" element={<ForgotPassword/>} />
-        
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/signup" element={<Signup />} />
+
         <Route
           path="/home"
           element={

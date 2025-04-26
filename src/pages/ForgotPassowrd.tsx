@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { users } from "../users";
-import Loading from "../components/Loading";
 
 const ForgotPassword: React.FC = () => {
     const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
-    const [error, setError] = useState("");
-    const [loading, setLoading] = useState(false);
-
 
     // validate email
     const isValidEmail = (email: string): boolean => {
@@ -22,7 +17,6 @@ const ForgotPassword: React.FC = () => {
             {/* <Header /> */}
             <div className="flex h-screen items-center justify-center bg-gray-100">
                 <div className="flex max-w-4xl w-1/2 bg-white rounded-xl shadow-md overflow-hidden">
-                    {loading && <Loading />}
                     {/* Left Side: Login Form */}
                     <div className="w-full p-8">
                         <h2 className="text-3xl font-bold mb-6 text-gray-900">Forgot Password</h2>
@@ -50,7 +44,7 @@ const ForgotPassword: React.FC = () => {
                             </button>
                         </form>
 
-                        {/* Forgot Password + Create User */}
+                        {/* Back to login */}
                         <div className="mt-4 flex justify-between text-sm">
                             <button className="text-blue-600 hover:underline" onClick={() => navigate('/login')}>
                                 Back to login

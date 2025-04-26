@@ -23,7 +23,7 @@ const Login: React.FC = () => {
       );
 
       if (user) {
-        alert("Login successful!");
+        // alert("Login successful!");
         // store data in localstorage
         localStorage.setItem("user", JSON.stringify(user));
         setError("");
@@ -96,7 +96,7 @@ const Login: React.FC = () => {
                 Forgot Password?
               </button>
               <button
-                onClick={() => window.open("/login", "_blank")}
+                onClick={() => window.open("/signup", "_blank")}
                 className="text-green-600 hover:underline"
               >
                 Create a new user

@@ -4,7 +4,7 @@ import {
   PopoverGroup
 } from '@headlessui/react'
 import Logo from '../img/logo.png'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -28,24 +28,22 @@ export default function Header() {
       </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
 
-          <a href="/home" className="text-sm/6 font-semibold text-secondary">
+          <Link to="/home" className="text-sm/6 font-semibold text-secondary">
             Home
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-secondary">
+          </Link>
+          <Link to="#" className="text-sm/6 font-semibold text-secondary">
             Marketplace
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-secondary">
+          </Link>
+          <Link to="#" className="text-sm/6 font-semibold text-secondary">
             Company
-          </a>
+          </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          {/* <a href="/login" className="text-sm/6 font-semibold text-secondary">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a> */}
 
+          {/* Added logout button*/}
           <button
             onClick={handleLogout}
-            className="text-sm/6 font-semibold text-secondary"
+            className="text-sm/6 font-semibold text-secondary cursor-pointer"
           >
             Log out <span aria-hidden="true">&rarr;</span>
           </button>

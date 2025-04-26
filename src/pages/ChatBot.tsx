@@ -12,7 +12,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen }) => {
       {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="absolute top-30 left-2 z-50 rounded-full bg-primary text-white px-3 py-1 shadow-md hover:bg-primary-dark"
+        className="absolute top-30 left-2 z-50 rounded-full bg-primary text-white px-3 py-1 shadow-md hover:bg-primary-dark cursor-pointer"
       >
         {isOpen ? "Close Chat" : "Open Chat"}
       </button>
